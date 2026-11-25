@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: enigmas-do-esqueleto
+    name: hytalerp-enigmas
     runtime: node
     plan: free
     buildCommand: npm install
