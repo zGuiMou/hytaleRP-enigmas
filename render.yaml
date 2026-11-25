@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: enigmas-do-esqueleto
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: SESSION_SECRET
+        generateValue: true
+      # ANSWERS_JSON e REWARD_CODE devem ser cadastrados manualmente como valores secretos.
